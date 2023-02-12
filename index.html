@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/func.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">## HAPPY VALENTINESSSSS!!!</span><br/>
+			<span class="comments"># Since CS stud man ko,</span><br/>
+			<span class="comments">#  kani lang sa ha instead sa letter HAHAHA.</span><br/>
+			<span class="comments">##</span><br/>
+			i = Akow(<span class="string">"Owen"</span>);<br/>
+			u = Ikaw(<span class="string">"Seashels"</span>);<br/>
+			<span class="comments"># 2019, I nasilaw kos imong kagwapa, ah shet haba ng her. </span><br/>
+			i.fell(u)<br/>
+			<span class="comments"># Fastforward, I confessed to you. </span><br/>
+			i.confess(u)<br/>
+			<span class="comments"># March 8, 2021, You became my girlfriend. CHAR.</span><br/>
+			u.accepted(i)<br/>
+			<span class="comments"># Since then, we our high school/SHS/College days together .</span><br/>
+			happy(u, i)<br/>
+			<span class="comments"># We enjoyed having each other's company.</span><br/>
+			together(u, i)<br/>
+			<span class="comments"># We enjoy playing ML, angela gods ng nanilac.</span><br/>
+			gamers(u, i)<br/>
+			<span class="comments"># We enjoy eating streetfoods, esp isaw, proben.</span><br/>
+			foodBuddies(u, i)<br/>
+			<span class="comments"># late 2022, finally, na legal najud ta bb.</span><br/>
+			legalizationisterist(u, i)<br/>
+			<span class="comments"># Sometimes there are a few conflicts between us.</span><br/>
+			conflict(u, i, sometimes=<span class="keyword">True</span>)<br/>
+			<span class="comments"># But these challanges/conflicts are what made us stronger today.</span><br/>
+			u.in_love_with(i) <br/>
+			i.in_love_with(u) <br/>
+			<span class="comments"># You are the greatest love of my life.</span><br/>
+			while <span class="keyword">True</span>:<br/>
+			<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>u = everything<br/>
+			<span class="placeholder"></span><span class="keyword">else</span>:<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>everything = u<br/>
+			<span class="comments"># Happy Valentines SHEELLSSSS, See you Soonnnn.</span><br/>
+			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
+			i.live_happily_forever_with(u)<br/>
+			<span class="comments"># I love you forever.</span><br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Shels, we've been together for more than
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I Love u forever and ever.<br/>
+					<div class="signature">- Owen | Wenny</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+
+	together.setFullYear(2021, 3, 8);
+	together.setHours(15);
+	together.setMinutes(0);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
